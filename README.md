@@ -7,7 +7,7 @@ In this application, we can add call data .
 -Day of the week when the calls are longest. 
 
 # ER Diagram
-[![ERDiagram](https://github.com/TridipRong/CallHistory/blob/main/CallrData/er.png?raw=true)](https://github.com/TridipRong/CallHistory/blob/main/CallrData/er.png?raw=true)
+[![ERDiagram](https://github.com/TridipRong/CallHistory/blob/main/CallrData/image/er.png?raw=true)](https://github.com/TridipRong/CallHistory/blob/main/CallrData/image/er.png?raw=true)
 
 # Functionalities
 -   Add call data
@@ -43,39 +43,44 @@ spring.mvc.pathmatch.matching-strategy = ANT_PATH_MATCHER
 -   MySQL
 
 
-# Backend
 
 ## AllController
 
 #### POST : /addcall
 ```
-{
-    "duration": 142,
-    "end_time": "2023-01-12 04:20:06",
-    "mobile_number": "9083394594",
-    "start_time": "2023-01-12 04:01:05",
-    "caller_id": ""
-}
+ {
+        "Start_Time": "24-12-2021 06:00:01",
+        "end_time": "24-12-2021 06:05:03",
+        "id": "",
+        "duration": "",
+        "mobile": "7634238789"
+    }
 ```
+[![ERDiagram](https://github.com/TridipRong/CallHistory/blob/main/CallrData/image/Screenshot%20(365).png?raw=true)](https://github.com/TridipRong/CallHistory/blob/main/CallrData/image/er.png?raw=true)
 
 
 #### Get : /longestCallOfDay
 ```
 Hour of the day when the calls are longest is  11 PM-1AM
 ```
+[![ERDiagram](https://github.com/TridipRong/CallHistory/blob/main/CallrData/image/Screenshot%20(362).png?raw=true)](https://github.com/TridipRong/CallHistory/blob/main/CallrData/image/Screenshot%20(362).png?raw=true)
 
 #### Get : /highestCallVolumeOfDay
 ```
 Hour of the day when the call volume is highest is  12 PM-1PM
 ```
+[![ERDiagram](https://github.com/TridipRong/CallHistory/blob/main/CallrData/image/Screenshot%20(361).png?raw=true)](https://github.com/TridipRong/CallHistory/blob/main/CallrData/image/Screenshot%20(361).png?raw=true)
+
 
 #### Get : /highestCallVolumeOfWeek
 ```
 Day of the week when the call volume is highest is Wednesday
 ```
+[![ERDiagram](https://github.com/TridipRong/CallHistory/blob/main/CallrData/image/Screenshot%20(363).png?raw=true)](https://github.com/TridipRong/CallHistory/blob/main/CallrData/image/Screenshot%20(363).png?raw=true)
 
 #### Get : /longestcallOfWeek
 ```
 Day of the week when the call volume is highest is Wednesday
 ```
+[![ERDiagram](https://github.com/TridipRong/CallHistory/blob/main/CallrData/image/Screenshot%20(364).png?raw=true)](https://github.com/TridipRong/CallHistory/blob/main/CallrData/image/Screenshot%20(364).png?raw=true)
 
