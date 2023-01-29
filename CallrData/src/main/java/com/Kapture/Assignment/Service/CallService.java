@@ -17,12 +17,13 @@ public interface CallService {
 	
 	public String longestCallOfDay() throws CallException;
  
-	public String longestCallOfaDay(Date date)throws CallException;
-	  
-	public String highestCallVolumeOfaDay(Date date) throws CallException;
-	 
+//	public String longestCallOfaDay(Date date)throws CallException;
+//	  
+//	public String highestCallVolumeOfaDay(Date date) throws CallException;
+//	 
 	public String highestCallVolumeOfWeek() throws CallException;
 	 
 	public String longestcallOfWeek() throws CallException;
+	
 	public List<Calls> getCalls() throws CallException;
 }

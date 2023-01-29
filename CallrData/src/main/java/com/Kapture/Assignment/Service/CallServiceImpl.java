@@ -138,76 +138,76 @@ public class CallServiceImpl implements CallService{
 		
 	}
 
-	@Override
-	public String longestCallOfaDay(Date date) throws CallException {
-		Object data=callDAO.longestCallOfaDay(date);
-		
-		if(data==null) {
-			throw new CallException("Data not found");
-		}
-		
-		Integer start=(int)data;
-		Integer end=(int)data;
-		if(start==0 && end>=0) {
-			return "Hour of the day when the calls are longest is 12-"+(end+1)+" AM";
-		}
-		else if(start<12 && end<11) {
-			return "Hour of the day when the calls are longest is "+start+" - "+(end+1)+" AM";
-		}
-		else if(start<=11 && end==11) {
-			return "Hour of the day when the calls are longest is  "+start+" AM -"+(end+1)+" PM";
-		}
-		else if(start<=11 && end<=12) {
-			return "Hour of the day when the calls are longest is  "+start+" AM -"+(end-11)+" PM";
-		}
-		else if(start==12) {
-			return "Hour of the day when the calls are longest is  "+start+" PM -"+(end-11)+" PM";
-		}
-		else if(start<=23 && end==23) {
-			return "Hour of the day when the calls are longest is  "+(start-12)+" PM-"+(end-11)+" AM";
-		}
-		else if(start<=23 && end>=0 && end<12) {
-			return "Hour of the day when the calls are longest is  "+(start-12)+" PM -"+(end-11)+" AM";
-		}
-		else  {
-			return"Hour of the day when the calls are longest is  "+(start-12)+" - "+(end-11)+" PM";
-		}
-	}
-
-	@Override
-	public String highestCallVolumeOfaDay(Date date) throws CallException {
-		Object data=callDAO.highestCallVolumeOfaDay(date);
-		
-		if(data==null) {
-			throw new CallException("Data not found");
-		}
-		
-		Integer start=(int)data;
-		Integer end=(int)data;
-		if(start==0 && end>=0) {
-			return "Hour of the day when the call volume is highest is 12-"+(end+1)+" AM";
-		}
-		else if(start<12 && end<11) {
-			return "Hour of the day when the call volume is highest is "+start+"-"+(end+1)+" AM";
-		}
-		else if(start<=11 && end==11) {
-			return "Hour of the day when the call volume is highest is  "+start+" AM-"+(end+1)+"PM";
-		}
-		else if(start<=11 && end<=12) {
-			return "Hour of the day when the call volume is highest is  "+start+" AM-"+(end-11)+"PM";
-		}
-		else if(start==12) {
-			return "Hour of the day when the call volume is highest is  "+start+" PM-"+(end-11)+"PM";
-		}
-		else if(start<=23 && end==23) {
-			return "Hour of the day when the call volume is highest is  "+(start-12)+" PM-"+(end-11)+"AM";
-		}
-		else if(start<=23 && end>=0 && end<12) {
-			return "Hour of the day when the call volume is highest is  "+(start-12)+" PM-"+(end+1)+"AM";
-		}
-		else  {
-			return"Hour of the day when the calls are longest is  "+(start-12)+"-"+(end-11)+" PM";
-		}
-	}
+//	@Override
+//	public String longestCallOfaDay(Date date) throws CallException {
+//		List<Object[]> callDetails=callDAO.longestCallOfaDay(date);
+//		
+//		if(callDetails==null) {
+//			throw new CallException("Data not found");
+//		}
+//		 Object[] data=callDetails.get(0);
+//		Integer start=(int)data[0];
+//		Integer end=(int)data[1];
+//		if(start==0 && end>=0) {
+//			return "Hour of the day when the calls are longest is 12-"+(end+1)+" AM";
+//		}
+//		else if(start<12 && end<11) {
+//			return "Hour of the day when the calls are longest is "+start+" - "+(end+1)+" AM";
+//		}
+//		else if(start<=11 && end==11) {
+//			return "Hour of the day when the calls are longest is  "+start+" AM -"+(end+1)+" PM";
+//		}
+//		else if(start<=11 && end<=12) {
+//			return "Hour of the day when the calls are longest is  "+start+" AM -"+(end-11)+" PM";
+//		}
+//		else if(start==12) {
+//			return "Hour of the day when the calls are longest is  "+start+" PM -"+(end-11)+" PM";
+//		}
+//		else if(start<=23 && end==23) {
+//			return "Hour of the day when the calls are longest is  "+(start-12)+" PM-"+(end-11)+" AM";
+//		}
+//		else if(start<=23 && end>=0 && end<12) {
+//			return "Hour of the day when the calls are longest is  "+(start-12)+" PM -"+(end-11)+" AM";
+//		}
+//		else  {
+//			return"Hour of the day when the calls are longest is  "+(start-12)+" - "+(end-11)+" PM";
+//		}
+//	}
+//
+//	@Override
+//	public String highestCallVolumeOfaDay(Date date) throws CallException {
+//		List<Object[]> callDetails=callDAO.highestCallVolumeOfaDay(date);
+//		
+//		if(callDetails==null) {
+//			throw new CallException("Data not found");
+//		}
+//		 Object[] data=callDetails.get(0);
+//		Integer start=(int)data[0];
+//		Integer end=(int)data[1];
+//		if(start==0 && end>=0) {
+//			return "Hour of the day when the call volume is highest is 12-"+(end+1)+" AM";
+//		}
+//		else if(start<12 && end<11) {
+//			return "Hour of the day when the call volume is highest is "+start+"-"+(end+1)+" AM";
+//		}
+//		else if(start<=11 && end==11) {
+//			return "Hour of the day when the call volume is highest is  "+start+" AM-"+(end+1)+"PM";
+//		}
+//		else if(start<=11 && end<=12) {
+//			return "Hour of the day when the call volume is highest is  "+start+" AM-"+(end-11)+"PM";
+//		}
+//		else if(start==12) {
+//			return "Hour of the day when the call volume is highest is  "+start+" PM-"+(end-11)+"PM";
+//		}
+//		else if(start<=23 && end==23) {
+//			return "Hour of the day when the call volume is highest is  "+(start-12)+" PM-"+(end-11)+"AM";
+//		}
+//		else if(start<=23 && end>=0 && end<12) {
+//			return "Hour of the day when the call volume is highest is  "+(start-12)+" PM-"+(end+1)+"AM";
+//		}
+//		else  {
+//			return"Hour of the day when the calls are longest is  "+(start-12)+"-"+(end-11)+" PM";
+//		}
+//	}
 
 }

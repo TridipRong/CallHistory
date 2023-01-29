@@ -29,17 +29,17 @@ public class AllController {
         return ResponseEntity.ok(response);
 	}
 	
-	 @GetMapping("/longestCallOfaDay/{date}")
-	 public ResponseEntity<String> longestCallOfaDay(@PathVariable("date") Date date) throws CallException{
-		 return ResponseEntity.ok(callservice.longestCallOfaDay(date));
-	 }
-	 
-	 
-	 @GetMapping("/highestCallVolumeOfaDay/{date}")
-	 public ResponseEntity<String> highestCallVolumeOfaDay(@PathVariable("date") Date date) throws CallException{
-		 return ResponseEntity.ok(callservice.highestCallVolumeOfaDay(date));
-	 }
-
+//	 @GetMapping("/longestCallOfaDay/{date}")
+//	 public ResponseEntity<String> longestCallOfaDay(@PathVariable("date") Date date) throws CallException{
+//		 return ResponseEntity.ok(callservice.longestCallOfaDay(date));
+//	 }
+//	 
+//	 
+//	 @GetMapping("/highestCallVolumeOfaDay/{date}")
+//	 public ResponseEntity<String> highestCallVolumeOfaDay(@PathVariable("date") Date date) throws CallException{
+//		 return ResponseEntity.ok(callservice.highestCallVolumeOfaDay(date));
+//	 }
+//
 	@GetMapping("/getallcall")
 	 public ResponseEntity<List<Calls>> getCalls() throws CallException{
 		List<Calls> callList = callservice.getCalls();
