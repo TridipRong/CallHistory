@@ -1,9 +1,8 @@
 package com.Kapture.Assignment.Entity;
 
-import java.security.Timestamp;
-import java.time.Instant;
+import java.time.LocalDateTime;
 
-import org.apache.logging.log4j.CloseableThreadContext.Instance;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -30,11 +29,13 @@ public class Calls {
 	@Column(name="mobileNumber")
 	private String Mobile;
 	
-	@Column(name="start_time")
-	private Instant Start_Time;
+
+	@JsonFormat(pattern="dd-MM-yyyy HH:mm:ss")
+	private LocalDateTime Start_Time;
 	
-	@Column(name="end_time")
-	private Instant End_Time;
+
+	@JsonFormat(pattern="dd-MM-yyyy HH:mm:ss")	
+	private LocalDateTime end_time;
 	
 	@Column(name="duration")
 	private Integer Duration;
