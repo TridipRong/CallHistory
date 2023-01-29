@@ -56,7 +56,7 @@ spring.mvc.pathmatch.matching-strategy = ANT_PATH_MATCHER
         "mobile": "7634238789"
     }
 ```
-[![ERDiagram](https://github.com/TridipRong/CallHistory/blob/main/CallrData/image/Screenshot%20(365).png?raw=true)](https://github.com/TridipRong/CallHistory/blob/main/CallrData/image/er.png?raw=true)
+[![ERDiagram](https://github.com/TridipRong/CallHistory/blob/main/CallrData/image/Screenshot%20(365).png?raw=true)](https://github.com/TridipRong/CallHistory/blob/main/CallrData/image/Screenshot%20(365).png?raw=true)
 
 
 #### Get : /longestCallOfDay
