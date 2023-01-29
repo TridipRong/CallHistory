@@ -7,7 +7,7 @@ In this application, we can add call data .
 -Day of the week when the calls are longest. 
 
 # ER Diagram
-[![ERDiagram](https://raw.githubusercontent.com/TridipRong/StudentReportingSystem/main/image/er.png?raw=true)](https://raw.githubusercontent.com/TridipRong/StudentReportingSystem/main/image/er.png?raw=true)
+[![ERDiagram](https://github.com/TridipRong/CallHistory/blob/main/CallrData/er.png?raw=true)](https://github.com/TridipRong/CallHistory/blob/main/CallrData/er.png?raw=true)
 
 # Functionalities
 -   Add call data
